@@ -1,0 +1,13 @@
+.current,
+.logo,
+.nav-list__link:hover,
+.nav-list__link:focus,
+.contact-list__link:hover,
+.contact-list__link:focus,
+.address__link:hover,
+.address__link:focus,
+.modal__close-btn:hover,
+.modal__close-btn:focus {
+  color: var(--accent-text-color);
+  fill: var(--accent-text-color);
+}

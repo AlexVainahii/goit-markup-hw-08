@@ -1,0 +1,11 @@
+.logo {  max-width: 145px;
+    font-family: "Raleway",sans-serif;
+    @include font(700, 26px, 1.19, 0.03em, var(--accent-text-color));
+    cursor: pointer;
+    &__text--black {
+      color: var(--accent-btn-text-color);
+    }
+    &__text--white {
+      color: var(--background-color);
+    }
+  }
