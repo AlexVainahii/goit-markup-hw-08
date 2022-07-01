@@ -1,24 +1,82 @@
 .hero {
-    padding-bottom: 200px;
-    padding-top: 200px;
-    text-align: center;
+  margin: 0 auto;
+  padding: 118px 0;
+  text-align: center;
+  background-color: var(--primary-background-color);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+      ),
+    url(../images/header_img_mob.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @include retina{background-image: linear-gradient(
+    to bottom,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+    ),
+  url(../images/header_img_mob_2х.jpg);}
+
+  @include mobile {
+    width: 480px;
+  }
+  @include tablet {
+    width: 768px;
+    padding: 118px 204px;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+      ),
+    url(../images/header_img_tab.jpg);
+     @include retina{background-image: linear-gradient(
+    to bottom,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+    ),
+  url(../images/header_img_tab_2х.jpg);
+  }
+  }
+
+  @include desktop {
+    width: 1600px;
+     padding-bottom: 200px;
+     padding-top: 200px;
     background-color: var(--primary-background-color);
     background-image: linear-gradient(
         to bottom,
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../images/background-img.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    max-width: 1600px;
-    margin: 0 auto;
+      url(../images/header-img.jpg);
+    
+    @include retina{background-image: linear-gradient(
+      to bottom,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+      ),
+    url(../images/header_img_2х.jpg);
+    }
+  }
   }
   
   .hero__title {
     margin-bottom: 30px;
-    @include font(900, 44px, 1.36, 0.06em, var(--background-color));
     text-transform: uppercase;
+    text-align: center;
+
+    @include font(900, 26px, 1.62, 0.06em, var(--background-color));
+
+    
+    @include tablet{}
+
+
+    @include desktop {
+    
+    // @include font(900, 44px, 1.36, 0.06em, var(--background-color));
+    // 
+    }
     }
   
