@@ -31,7 +31,7 @@
       rgba(47, 48, 58, 0.4)
       ),
     url(../images/header_img_tab.jpg);
-     @include retina{background-image: linear-gradient(
+    @include retina{background-image: linear-gradient(
     to bottom,
     rgba(47, 48, 58, 0.4),
     rgba(47, 48, 58, 0.4)
@@ -69,13 +69,9 @@
     @include font(900, 26px, 1.62, 0.06em, var(--background-color));
 
     
-    @include tablet{}
-
-
     @include desktop {
     
-    // @include font(900, 44px, 1.36, 0.06em, var(--background-color));
-    // 
-    }
+     @include font(900, 44px, 1.36, 0.06em, var(--background-color));
+         }
     }
   
