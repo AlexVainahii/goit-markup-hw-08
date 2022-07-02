@@ -8,7 +8,7 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
       ),
-    url(../images/header_img_mob.jpg);
+    url(../images/header-img-mob.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -17,7 +17,7 @@
     rgba(47, 48, 58, 0.4),
     rgba(47, 48, 58, 0.4)
     ),
-  url(../images/header_img_mob_2х.jpg);}
+  url(../images/header-img-mob-2x.jpg);}
 
   @include mobile {
     width: 480px;
@@ -30,13 +30,13 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
       ),
-    url(../images/header_img_tab.jpg);
+    url(../images/header-img-tab.jpg);
     @include retina{background-image: linear-gradient(
     to bottom,
     rgba(47, 48, 58, 0.4),
     rgba(47, 48, 58, 0.4)
     ),
-  url(../images/header_img_tab_2x.jpg);
+  url(../images/header-img-tab-2x.jpg);
   }
   }
 
@@ -49,14 +49,14 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../images/header_img.jpg);
+      url(../images/header-img.jpg);
     
     @include retina{background-image: linear-gradient(
       to bottom,
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
       ),
-    url(../images/header_img_2х.jpg);
+    url(../images/header-img-2x.jpg);
     }
   }
   }

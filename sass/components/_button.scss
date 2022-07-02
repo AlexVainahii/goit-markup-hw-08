@@ -9,6 +9,7 @@
   font-family: inherit;
   font-style: normal;
   cursor: pointer;
+  margin: 0 auto;
   @include font(700, 16px, 1.88, 0.06em, var(--background-color));
     &:hover,
     &:focus{

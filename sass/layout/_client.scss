@@ -1,13 +1,36 @@
+
+.client{
+  @include desktop{
+    margin: 0 auto;
+    width:  1600px;
+  }
+}
 .client__list {
-  display: flex;
+  @include first_item_gridFlex ();
+  margin-bottom: -30px;
+  @include desktop{
   justify-content: space-between;
-  margin-top: 50px;
+  }
 }
 .client__item {
-  width: 170px;
-  height: 92px;
-  & + &{
-    margin-left: 30px;
+  max-width: 226px;
+  max-height: 92px;
+  margin-bottom: 30px;
+  @include gridFlex(2);
+  @include mobile{
+    width: 210px;
+    height: 92px;
+  }
+  @include tablet{
+    width: 226px;
+    height: 92px;
+    @include gridFlex(3);
+    
+  }
+  @include desktop{
+    @include gridFlex(6);
+    width: 170px;
+    height: 92px;
   }
 }
 
@@ -26,5 +49,9 @@
     fill: var(--accent-text-color);
     border: 1px solid var(--accent-text-color);
   }
+  }
+  .client__icon{
+    width: 106px;
+    height: 60px;
   }
 
