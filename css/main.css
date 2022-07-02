@@ -679,7 +679,7 @@ body {
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/header_img_tab_2х.jpg);
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/header_img_tab_2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -687,7 +687,7 @@ body {
     width: 1600px;
     padding: 200px 0;
     background-color: var(--primary-background-color);
-    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/header-img.jpg);
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/header_img.jpg);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
@@ -716,11 +716,21 @@ body {
   }
 }
 
+.benefits {
+  margin: 0 auto;
+}
+@media screen and (min-width: 1200px) {
+  .benefits {
+    width: 1600px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .benefits__list {
     display: flex;
   }
 }
+
 .benefits__item {
   max-width: 450px;
   text-align: left;
@@ -753,17 +763,11 @@ body {
   height: 120px;
   width: 100%;
   background: var(--team-background-color);
-  display: block;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
-@media screen and (min-width: 768px) {
-  .benefits__wrap-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
+
 .benefits__icon {
   width: 70px;
   height: 70px;

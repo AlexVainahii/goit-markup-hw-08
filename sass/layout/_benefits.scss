@@ -1,13 +1,19 @@
+.benefits{
+  margin: 0 auto;
+  @include desktop {
+    width:  1600px;
+  }
+}
+
+
+
 .benefits__list {
-  
-  @include mobile{}
   @include tablet{
   display: flex;
   }
-  @include desktop{ }
-  }
-  
-  .benefits__item {
+}
+
+.benefits__item {
     max-width: 450px; 
     text-align: left;
     background-color: var(--background-color);
@@ -34,12 +40,7 @@
     height: 120px;
     width: 100%;
     background: var(--team-background-color);
-    @include centerFlex (block);
-    @include tablet{
-      @include centerFlex ();
-    }
-    @include desktop{}
-      
+    @include centerFlex ();
   }
   
   .benefits__icon { 
