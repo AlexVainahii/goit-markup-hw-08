@@ -429,8 +429,8 @@ body {
   max-width: 145px;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--accent-text-color);
   cursor: pointer;
@@ -440,6 +440,15 @@ body {
 }
 .logo__text--white {
   color: var(--background-color);
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--accent-text-color);
+  }
 }
 
 .section {
@@ -1025,8 +1034,16 @@ body {
   background-color: var(--primary-background-color);
   text-align: center;
 }
+@media screen and (min-width: 768px) {
+  .footer {
+    height: 463px;
+    width: 768px;
+    margin: 0 auto;
+  }
+}
 @media screen and (min-width: 1200px) {
   .footer {
+    height: 252px;
     margin: 0 auto;
     width: 1600px;
   }
@@ -1035,20 +1052,36 @@ body {
   height: 100%;
   text-align: center;
 }
+@media screen and (min-width: 768px) {
+  .footer .container {
+    padding-left: 76px;
+    padding-right: 89px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 @media screen and (min-width: 1200px) {
   .footer .container {
-    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+    flex-wrap: wrap;
     position: relative;
-    text-align: none;
+    text-align: left;
   }
 }
 
 .contacts {
   text-align: center;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .contacts {
     text-align: left;
+    margin-right: 165px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts {
+    margin-right: 0px;
   }
 }
 
@@ -1059,6 +1092,8 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .address {
+    margin: 0;
+    margin-top: 20px;
     max-width: 231px;
     text-align: left;
   }
@@ -1076,6 +1111,7 @@ body {
 .address__link {
   font-style: normal;
   font-weight: 400;
+  font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--contact-color);
@@ -1087,6 +1123,11 @@ body {
 
 .footer__social {
   margin-top: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footer__social {
+    margin-top: 5px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer__social {
@@ -1108,8 +1149,16 @@ body {
 .subscript {
   margin-top: 60px;
 }
+@media screen and (min-width: 768px) {
+  .subscript {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
 @media screen and (min-width: 1200px) {
   .subscript {
+    text-align: left;
+    margin: 0;
     position: absolute;
     display: flex;
     right: 15px;
@@ -1117,6 +1166,9 @@ body {
   }
 }
 
+.subscript__label {
+  display: block;
+}
 @media screen and (min-width: 1200px) {
   .subscript__label {
     position: absolute;
@@ -1125,27 +1177,18 @@ body {
 }
 
 .subscript__input {
-  max-width: 450px;
+  margin: 20px 0;
+  width: 100%;
   height: 50px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-}
-@media screen and (min-width: 480px) {
-  .subscript__input {
-    width: 450px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .subscript__input {
-    width: 358px;
-    font-size: 16px;
-    line-height: 1.25;
-    letter-spacing: 0.03em;
-    color: var(--contact-color);
-    transition: border-color var(--time-duration) var(--time-function);
-  }
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: var(--contact-color);
+  transition: border-color var(--time-duration) var(--time-function);
 }
 .subscript__input::placeholder {
   color: rgba(255, 255, 255, 0.6);
@@ -1155,20 +1198,51 @@ body {
   cursor: pointer;
   outline: none;
 }
+@media screen and (min-width: 480px) {
+  .subscript__input {
+    max-width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .subscript__input {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscript__input {
+    width: 358px;
+    margin: 0;
+  }
+}
 
 .subscript__button {
+  margin: 0 auto;
+  width: 200px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
-  height: 50px;
-  margin-left: 12px;
-  padding: 10px 28px;
+}
+@media screen and (min-width: 1200px) {
+  .subscript__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    margin-left: 12px;
+    padding: 10px 28px;
+  }
 }
 
 .subscript__wrap-icon {
   fill: var(--background-color);
   margin-left: 10px;
+}
+
+.subscript__icon {
+  width: 24px;
+  height: 24px;
 }
 
 .backdrop {
