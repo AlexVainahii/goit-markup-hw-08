@@ -6,18 +6,45 @@
 }
 
 .header__container {
-  display: none;
-  @include tablet{
+  position: relative;
     display: flex;
     align-items: center;
-  }
- 
-  }
+    }
   .header {
     border-bottom: 1px solid var(--border-bottom-color);
   }
+
+
+  .header__menu-box{
+    display: flex;
+    // flex-direction: column;
+    // position: fixed;
+    // padding: 48px ;
+    // left: 0;
+    // top: 0;
+    // text-align: left;
+    // background: var(--background-color);
+    // box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04),
+    // 0px 2px 4px rgba(0, 0, 0, 0.08), 
+    // 0px 1px 3px rgba(0, 0, 0, 0.16);
+    // width: 100vw;
+    // height: 100vh;
+    @include mobile{
+      width: 480px;
+      height: 796px;
+    }
+    @include tablet{
+    // flex-direction: row;
+    // position: static;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    // box-shadow:transparent
+  }
+  }
   
   .header__logo {
+    padding: 16px 0;
     @include tablet{
     display: block;
     margin-right: 88px;
@@ -33,22 +60,40 @@
  
   
   .nav-list {
+    &__item +  &__item {
+      margin-top: 32px;
+    }
+    @include tablet
+    {
     display: flex;
     width: 294px;
     &__item +  &__item {
       margin-left: 50px;
+      margin-top: 0;
+      }
     }
   }
  
   
   .contact-list {
+    display: flex;
+    flex-direction: column-reverse;
+    &__item +&__item {
+      margin-top: 32px;
+    }
     @include tablet{
+      flex-direction: column;
       margin-left: auto;
+      &__item +&__item {
+        margin-top: 0;
+      }
       }
     @include desktop{ 
     display: flex;
+    flex-direction: row;
     &__item +&__item {
       margin-left: 30px;
+      margin-top: 0;
     }
   }
   }
@@ -58,19 +103,29 @@
   
   .nav-list__link,
   .contact-list__link {
+    @include font(500, 40px, 1.18, 0.02em, var(--primary-text-color));
     transition: color var(--time-duration) var(--time-function),
-      fill var(--time-duration) var(--time-function);
-    
-    @include font(500, 12px, 1.17, 0.02em, null);
+    fill var(--time-duration) var(--time-function);
+    @include tablet{
+    @include font(500, 12px, 1.17, 0.02em, var(--primary-text-color));
+    }
     @include desktop{
     padding-top: 32px;
     padding-bottom: 32px;
-    @include font(500, 14pxl, 1.14, 0.02em, null);
+    @include font(500, 14px, 1.14, 0.02em, var(--primary-text-color));
     }
   }
-  .contact-list__link {
+
+  .nav-list__link {
     @include tablet{
+    padding-top: 32px;
+    padding-bottom: 32px;
+    }
+  }
+
+  .contact-list__link {
     color: var(--secondary-text-color);
+    @include tablet{
     display: flex;
     align-items: center;
     padding: 5px 0;
@@ -79,7 +134,9 @@
   
   .contact-list__icon-email {
     fill: currentColor;
+    display: none;
     @include tablet{
+      display: block;
       width: 14px;
       height: 10px;
       margin-right: 8px;
@@ -92,7 +149,9 @@
   }
   .contact-list__icon-tel {
     fill: currentColor;
+    display: none;
     @include tablet{
+    display: block;
     width: 10px;
     height: 14px;
     margin-right: 8px;
@@ -107,6 +166,8 @@
   
   
   .current {
+    color: var(--accent-text-color);
+    @include tablet{
     position: relative;
     &::after {
       position: absolute;
@@ -118,6 +179,48 @@
       border-radius: 2px;
       background: var(--accent-text-color);
     }
+    }
   }
-  
+
+  .header__menu-button {
+    border: transparent;
+    background-color: transparent;
+    margin-left: auto;
+    padding: 0;
+       &:hover .header__menu-icon,
+       &:focus .header__menu-icon {
+        fill: var(--accent-text-color);
+      }
+    @include tablet {
+      display: none;
+    }
+  }
+
+  // .header__menu-icon {
+  //   width: 40px;
+  //   height: 40px;
+  //   fill: var(--accent-btn-text-color);
+  //   transition: fill var(--time-duration) var(--time-function);
+  // }
  
+  .header__soc-list {
+    display: flex;
+    padding-left: -10px;
+    @include tablet{
+      display: none;
+  }
+  }
+  // .header__soc-item{
+  // padding: 0 10px;
+  // &+&{
+  //   border-left: 1px solid rgba(33, 33, 33, 0.2);;
+  // }
+  // &:first-child{padding-left: 0;}
+  // &:last-child{padding-right: 0;}
+  // }
+
+
+
+  .header__soc-link {
+    @include font(500,18px,1.22,0.02em, var(--accent-text-color))
+  }
