@@ -12,10 +12,10 @@
       mobileMenu.classList.toggle('is-open');
       openMenuBtn.classList.toggle('is-open');
       scrollBtn.classList.toggle('no-scroll');
-      const scrollLockMethod = !isMenuOpen
-        ? 'disableBodyScroll'
-        : 'enableBodyScroll';
-      bodyScrollLock[scrollLockMethod](document.body);
+      // const scrollLockMethod = !isMenuOpen
+      //   ? 'disableBodyScroll'
+      //   : 'enableBodyScroll';
+      // bodyScrollLock[scrollLockMethod](document.body);
     };
   
     openMenuBtn.addEventListener('click', toggleMenu);
@@ -27,7 +27,7 @@
       openMenuBtn.classList.remove('is-open');
       scrollBtn.classList.remove('no-scroll');
       openMenuBtn.setAttribute('aria-expanded', false);
-      bodyScrollLock.enableBodyScroll(document.body);
+      // bodyScrollLock.enableBodyScroll(document.body);
     });
   })();
 
