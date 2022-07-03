@@ -1,16 +1,38 @@
 
 
 .project {
+  margin-top: 40px;
+  margin-bottom: -30px;
+  @include tablet {
+  margin-top: 30px;  
   @include first_item_gridFlex ();
-      } 
+  }
+  @include desktop{
+    margin-top: 40px;
+  }    
+} 
   .project__item {
+    margin-bottom: 30px;
+    max-width: 450px;
+    max-height: 404px;
+    @include mobile{
+      width: 450px;
+      height: 404px;
+    }
+    @include tablet {
+      width: 354px;
+      height: 440px;
+      @include gridFlex (2);
+      margin-bottom: 30px
+    }
+    @include desktop {
     @include gridFlex ();
-    // width: 370px;
+    width: 370px;
+    height: 404px;
     text-align: start;
-    &:nth-child(n + 4) {
-      margin-top: 30px;
     }
   }
+  
  
   .project__link {
     width: 100%;
