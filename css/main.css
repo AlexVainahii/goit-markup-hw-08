@@ -1765,10 +1765,26 @@ body {
 
 .project__back {
   position: relative;
-  width: 370px;
-  height: 294px;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   z-index: 0;
+}
+@media screen and (min-width: 480px) {
+  .project__back {
+    width: 450px;
+    height: 294px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .project__back {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .project__back {
+    width: 370px;
+  }
 }
 
 .project__back-box {
@@ -1793,12 +1809,17 @@ body {
 }
 
 .project__title {
-  white-space: nowrap;
+  white-space: wrap;
   margin-bottom: 4px;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--primary-text-color);
+}
+@media screen and (min-width: 480px) {
+  .project__title {
+    white-space: nowrap;
+  }
 }
 
 .project__text {
