@@ -1,10 +1,4 @@
 
-.client{
-  @include desktop{
-    margin: 0 auto;
-    width:  1600px;
-  }
-}
 .client__list {
   @include first_item_gridFlex ();
   margin-bottom: -30px;

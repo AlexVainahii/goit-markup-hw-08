@@ -7,14 +7,10 @@
 
   @include tablet {
     height: 463px;
-    width: 768px;
-    margin: 0 auto;
   }
 
   @include desktop {
     height: 252px;
-    margin: 0 auto;
-    width: 1600px;
   }
   & .container {
     height: 100%;
