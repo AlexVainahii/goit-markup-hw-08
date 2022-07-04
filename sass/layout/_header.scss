@@ -206,6 +206,11 @@
     display: none;
   }
 }
+.header__icon-menu,
+.header__close-menu {
+  width: 40px;
+  height: 40px;
+}
 
 .header__button-menu .header__icon-menu {
   display: block;
