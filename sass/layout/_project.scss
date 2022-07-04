@@ -17,18 +17,15 @@
     max-height: 404px;
     @include mobile{
       width: 450px;
-      height: 404px;
     }
     @include tablet {
       width: 354px;
-      height: 440px;
       @include gridFlex (2);
       margin-bottom: 30px
     }
     @include desktop {
     @include gridFlex ();
     width: 370px;
-    height: 404px;
     text-align: start;
     }
   }

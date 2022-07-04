@@ -1721,13 +1721,11 @@ body {
 @media screen and (min-width: 480px) {
   .project__item {
     width: 450px;
-    height: 404px;
   }
 }
 @media screen and (min-width: 768px) {
   .project__item {
     width: 354px;
-    height: 440px;
     flex-basis: calc(50% - 30px);
     margin-left: 30px;
     margin-bottom: 30px;
@@ -1738,7 +1736,6 @@ body {
     flex-basis: calc(33.3333333333% - 30px);
     margin-left: 30px;
     width: 370px;
-    height: 404px;
     text-align: start;
   }
 }
