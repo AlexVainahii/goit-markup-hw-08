@@ -1456,6 +1456,7 @@ body {
 .backdrop {
   position: fixed;
   top: 0;
+  z-index: 3;
   transition: opacity var(--time-duration), visibility var(--time-duration);
   background: rgba(0, 0, 0, 0.2);
   width: 100%;
